@@ -6,9 +6,9 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import Events from "./pages/Events";
+import Dashboard from "./pages/Dashboard";
 import MyVolunteering from "./pages/MyVolunteering";
-import Coordinator from "./pages/Coordinator";
+import CoordinatorDashboard from "./pages/CoordinatorDashboard";
 
 function App() {
   return (
@@ -26,7 +26,8 @@ function App() {
 
         <Route element={<ProtectedRoute />}>
 
-          <Route path="/events" element={<Events />} />
+          <Route path="/events" element={<Dashboard />} />
+          <Route path="/dashboard" element={<Dashboard />} />
 
           <Route
             path="/my-volunteering"
@@ -35,7 +36,7 @@ function App() {
 
           <Route
             path="/coordinator"
-            element={<Coordinator />}
+            element={<CoordinatorDashboard />}
           />
 
         </Route>
